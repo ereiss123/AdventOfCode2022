@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 //#define X Rock
 //#define Y Paper
 //#define Z Scissors
