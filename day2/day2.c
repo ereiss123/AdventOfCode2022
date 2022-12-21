@@ -16,8 +16,6 @@ Z: win
 #define Paper 2
 #define Scissors 3
 
-int calcScore(char move1, char move2);
-
 int main(void){
     FILE* input;
     int score = 0;
