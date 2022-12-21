@@ -72,6 +72,7 @@ int main(void){
         }
     }
     printf("The elf with the most calories is elf %d carrying %d calories\nNext is elf %d carrying %d calories\nFinally elf %d carrying %d calories\nTotal:%d\n",max3_idx,max3,max2_idx,max2,max1_idx,max1,max1+max2+max3);
+    fclose(input);
     return 0;
 }
 

@@ -51,5 +51,6 @@ int main(void){
         }
     }
     printf("Final Score: %d\n",score);
-
+    fclose(input);
+    return 0;
 }
