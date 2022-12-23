@@ -47,13 +47,20 @@ int main(void){
     int quantity,src,dest;
     while(!feof(mov_input)){
         fscanf(mov_input,"move %d from %d to %d\n",&quantity,&src,&dest);
+        struct stack* temp;
+        temp = init_stack(i);
         for(int i = 0;i<quantity;i++){
             char box = pop(stacks[src-1]);
             if(box != 0){
-                push(stacks[dest-1],box);
+                push(temp,box);
+                /*push(stacks[dest-1],box);
                 printf("pushing %c from %d to %d\n",box,src-1,dest-1);
-                print_stacks(stacks);
+                print_stacks(stacks);*/
             }
+        }
+        for(int j = 0; j<quantity;j++){
+            char box = pop(temp);
+            push(stacks[dest-1],box);
         }
     }
     print_stacks(stacks);
